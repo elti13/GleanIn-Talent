@@ -335,43 +335,15 @@ footer { background: var(--charcoal); padding: 40px 56px; display: flex; align-i
         <label class="form-label">LinkedIn Profile <span>*</span></label>
         <input type="url" name="linkedin" class="form-input" placeholder="https://linkedin.com/in/yourname" required>
       </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">School or Employer</label>
-          <input type="text" name="affiliation" class="form-input" placeholder="Emory University, Google, etc.">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Year or Role</label>
-          <input type="text" name="role" class="form-input" placeholder="Junior, Product Manager, etc.">
-        </div>
+      <div class="form-group">
+        <label class="form-label">Resume Link <span>*</span></label>
+        <input type="url" name="resume_link" class="form-input" placeholder="Google Drive or Dropbox link to your resume" required>
+        <p class="form-hint">Upload to Google Drive, set to "Anyone with link can view", then paste the link here.</p>
       </div>
-
-      <div class="form-spacer"></div>
-      <div class="form-section-label">Your Skills</div>
-      <p class="form-hint" style="margin-bottom:16px;">Select all that apply. Add your own below.</p>
-
-      <div class="skill-chips" id="skillChips">
-        <div class="skill-chip" onclick="toggleSkill(this)">Market Research</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Financial Modeling</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Product Design</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">UX / UI</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Software Engineering</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Data Analysis</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Content Writing</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Marketing Strategy</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Brand Identity</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Legal Research</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Operations</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Sales</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Social Media</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Pitch Deck Design</div>
-        <div class="skill-chip" onclick="toggleSkill(this)">Clinical Research</div>
+      <div class="form-group">
+        <label class="form-label">Portfolio Link</label>
+        <input type="url" name="portfolio" class="form-input" placeholder="Personal site, Behance, GitHub, etc.">
       </div>
-      <div class="skill-input-row">
-        <input type="text" id="customSkill" placeholder="Add a skill not listed above">
-        <button type="button" onclick="addCustomSkill()">Add</button>
-      </div>
-      <input type="hidden" name="skills" id="skillsHidden">
 
       <div class="form-spacer"></div>
       <div class="form-section-label">Availability</div>
