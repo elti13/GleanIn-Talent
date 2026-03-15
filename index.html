@@ -241,25 +241,41 @@ footer { background: var(--charcoal); padding: 40px 56px; display: flex; align-i
     </p>
   </div>
 
-  <div class="math-block">
-    <div class="math-cell">
-      <div class="math-label">Your work value</div>
-      <div class="math-value">$2,000</div>
-      <div class="math-desc">Deferred payment converted to equity stake</div>
+  <section class="section" id="talent-calculator">
+  <p class="section-label">For Talent</p>
+  <h2>Calculate your potential return.</h2>
+  <p class="section-sub">See what your work could be worth if the company raises.</p>
+  <div class="calc-grid">
+    <div class="calc-box">
+      <div class="calc-box-title">Run your numbers</div>
+      <div class="input-group">
+        <label class="input-label">Value of work you would do</label>
+        <div class="input-wrap"><span>$</span><input type="number" class="input-field" id="talentValue" placeholder="2000" oninput="calculateTalent()"></div>
+      </div>
+      <div class="input-group">
+        <label class="input-label">Expected valuation at next round</label>
+        <div class="input-wrap"><span>$</span><input type="number" class="input-field" id="talentValuation" placeholder="10000000" oninput="calculateTalent()"></div>
+      </div>
+      <div class="calc-result" id="talentResult">
+        <div class="result-label">Your stake could be worth</div>
+        <div class="result-pct" id="talentPayout">—</div>
+        <div class="result-keep" id="talentEquity"></div>
+        <p style="font-size:12px;color:var(--muted);margin-top:12px;font-weight:300;">This depends on the company raising and at what valuation. Only work with founders you believe in.</p>
+      </div>
     </div>
-    <div class="math-cell">
-      <div class="math-label">Company raises at</div>
-      <div class="math-value">$10M</div>
-      <div class="math-desc">Next funding round valuation</div>
-    </div>
-    <div class="math-cell">
-      <div class="math-label">Your stake is worth</div>
-      <div class="math-value orange">$20,000</div>
-      <div class="math-desc">10x return on work you would have done anyway</div>
+    <div class="calc-box">
+      <div class="calc-box-title">What does $2,000 of work look like?</div>
+      <div id="talentScenarioTable">
+        <div class="scenario-row"><span class="scenario-label">Company raises at $1M</span><div class="scenario-right"><span class="scenario-val" id="ts1">$2,000</span><span class="scenario-pct">= $2,000</span></div></div>
+        <div class="scenario-row"><span class="scenario-label">Company raises at $2M</span><div class="scenario-right"><span class="scenario-val" id="ts2">$2,000</span><span class="scenario-pct">= $4,000</span></div></div>
+        <div class="scenario-row"><span class="scenario-label">Company raises at $5M</span><div class="scenario-right"><span class="scenario-val" id="ts3">$2,000</span><span class="scenario-pct">= $10,000</span></div></div>
+        <div class="scenario-row"><span class="scenario-label">Company raises at $10M</span><div class="scenario-right"><span class="scenario-val" id="ts4">$2,000</span><span class="scenario-pct">= $20,000</span></div></div>
+        <div class="scenario-row"><span class="scenario-label">Company raises at $20M</span><div class="scenario-right"><span class="scenario-val" id="ts5">$2,000</span><span class="scenario-pct">= $40,000</span></div></div>
+      </div>
+      <p style="font-size:12px;color:var(--muted);margin-top:16px;font-weight:300;">⚠️ These are best case scenarios. Most early stage startups do not raise. Only work with founders you believe in.</p>
     </div>
   </div>
 </section>
-</div>
 
 <!-- WHAT YOU GET -->
 <section class="section" id="what-you-get">
@@ -268,19 +284,16 @@ footer { background: var(--charcoal); padding: 40px 56px; display: flex; align-i
   <p class="section-sub">Every engagement gives you three things most work never does.</p>
   <div class="get-grid">
     <div class="get-card">
-      <div class="get-icon">📈</div>
-      <div class="get-title">Own a piece of what you build.</div>
-      <p class="get-desc">Your work converts to an equity stake when the company closes its next funding round. The upside grows with them. The floor is always the work itself.</p>
+      <div class="get-title">Equity</div>
+      <p class="get-desc">Your work becomes an equity investment in a company you believe in. The value of your contribution converts into ownership when the startup raises its next round</p>
     </div>
     <div class="get-card">
-      <div class="get-icon">🏗️</div>
-      <div class="get-title">Work that actually counts.</div>
-      <p class="get-desc">Every project is with a real founder building something real. You walk away with a portfolio piece, a case study, and proof that you can deliver — not just a spec assignment.</p>
+      <div class="get-title">Experience</div>
+      <p class="get-desc">Every project is with a real founder building something real. You walk away with a portfolio piece, a case study, and proof that you can deliver.</p>
     </div>
     <div class="get-card">
-      <div class="get-icon">🤝</div>
-      <div class="get-title">A connection that opens doors.</div>
-      <p class="get-desc">The founder you work with today is your reference and your introduction to the next opportunity. Early-stage founders know other founders. One project goes further than a cold LinkedIn message ever will.</p>
+      <div class="get-title">Network</div>
+      <p class="get-desc">The founder you work with today is your reference and your introduction to the next opportunity. Early-stage founders know other founders.</p>
     </div>
   </div>
 </section>
